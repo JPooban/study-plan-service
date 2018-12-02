@@ -1,0 +1,24 @@
+{
+  "name": "study-plan-service",
+  "version": "0.0.1",
+  "description": "A microservice of mfu reg for submission to enterprise application achitecture subject.",
+  "main": "app.js",
+  "author": "Jugkapong Pooban",
+  "license": "MIT",
+  "scripts": {
+    "start": "node Server.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/parser": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "http": "^0.0.0",
+    "ip": "^1.1.5",
+    "mongoose": "^5.3.14"
+  }
+}
