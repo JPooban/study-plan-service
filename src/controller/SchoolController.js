@@ -14,7 +14,7 @@ const list = async (req, res) => {
 const save = async (req, res) => {
   try {
     let schools = await schoolService.save(req.body)
-    res.status(200).json(schools)
+    res.status(201).json(schools)
   } catch (error) {
     res.status(400).json(error)
   }
