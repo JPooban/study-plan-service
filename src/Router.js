@@ -1,6 +1,7 @@
 import express from 'express';
 
 import * as school from './controller/SchoolController';
+import * as program from './controller/ProgramController';
 
 export default (app) => {
   let router = express.Router()
@@ -12,6 +13,10 @@ export default (app) => {
   router.route('/schools')
     .get(school.list)
     .post(school.save)
+
+  router.route('/programs')
+    .get(program.list)
+    .post(program.save)
 
   router.get('', (req, res) => {
     let endpoints = []
