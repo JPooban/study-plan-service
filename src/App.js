@@ -10,9 +10,9 @@ import router from './Router';
 import { MONGODB_URI as mongodbUrl } from './config/constant';
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8081
 
-const dbUrl = `${mongodbUrl}/student_plan_service`
+const dbUrl = `${mongodbUrl}/study_plan_service`
 const dbConfig = { useNewUrlParser: true, useCreateIndex: true, }
 
 mongoose.Promise = global.Promise
