@@ -8,7 +8,7 @@ metadata:
 spec:
   type: LoadBalancer
   externalIPs:
-  - 178.128.121.0
+  # - 178.128.121.0
   - 178.128.96.48
   ports:
   - port: 80
