@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+  namespace: development
+  labels:
+    app: api
+spec:
+  selector:
+    matchLabels:
+      app: api
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+      - name: api
+        image : docker.io/jpooban/study-plan-service:latest
+        ports:
+        - containerPort: 8081
+        env:
+        - name: PORT
+          value: '8081'
+        - name: MONGODB_URI
+          value: 'mongodb://10.106.171.134:27017'
+        imagePullPolicy: Always
