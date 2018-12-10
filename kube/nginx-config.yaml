@@ -12,4 +12,8 @@ data:
           proxy_pass http://10.102.208.86:8081/v1;
         }
 
+        location ^~ / {
+          proxy_pass http://10.97.97.164:3000;
+        }
+
       }
