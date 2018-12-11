@@ -15,10 +15,6 @@ let ProgramSchema = new Schema({
     type: String,
     required: true,
     unique: true
-  },
-  school: {
-    type: Schema.Types.ObjectId,
-    ref: 'School'
   }
 }, {
   timestamps: { createdAt: 'createdDate', updatedAt: 'timestamp' }

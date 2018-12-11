@@ -4,10 +4,10 @@ const School = mongoose.model('School')
 
 const list = () => (
   new Promise((resolve, reject) => {
-    School.find({}, (err, school) => {
+    School.find({}).populate({ path: 'programs' }).exec((err, schools) => {
       if (err) reject(err)
-      resolve(school)
-    })
+      resolve(schools)
+    }) 
   })
 )
 

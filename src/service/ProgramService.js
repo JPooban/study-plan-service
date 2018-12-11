@@ -17,7 +17,7 @@ const save = body => (
   new Promise((resolve, reject) => {
     let program = new Program(body)
 
-    rental.save((err, program) => {
+    program.save((err, program) => {
       if (err) reject(err)
       resolve(program)
     })

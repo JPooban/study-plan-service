@@ -16,6 +16,7 @@ const save = async (req, res) => {
     let program = await programService.save(req.body)
     res.status(201).json(program)
   } catch (error) {
+    console.log(error)
     res.status(400).json(error)
   }
 }
